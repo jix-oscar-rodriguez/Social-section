@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --coments: #501f4f;
+  --coments-header: #c574aa;
+  --parrafos: #8b838b;
+  --titulo: #4c1f49;
+  --review: #f6f1f7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "League Spartan", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-image: url(./images//bg-pattern-top-desktop.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* <!-- HEADER⬇️ PARTE SUPERIOR --> */
+.social-header {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  width: 80%;
+  margin: 9rem auto 0 auto;
+}
+.social-header .header-info h1 {
+  width: 70%;
+  color: var(--titulo);
+  font-size: 6rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+.social-header .header-info p {
+  color: var(--parrafos);
+  width: 70%;
+  font-size: 1.8rem;
+}
+.header-review {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+.header-review .review-container {
+  background-color: var(--review);
+  padding: 2rem 2rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  width: 30vw;
+}
+.header-review .review-container .fa-star {
+  transform: scale(1.4);
+  margin-left: 1rem;
+}
+.header-review .review-container p {
+  font-size: 1.6rem;
+  color: var(--titulo);
+  font-weight: 800;
+}
+
+
+
+/* <!--COMENTS ⬇️ COMENTARIOS --> */
+.grid-coments {
+  width: 80%;
+  margin: 7rem auto 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+.grid-coments .coments-container {
+  background-color: var(--coments);
+  color: white;
+  padding: 3rem 4rem;
+  border-radius: 1rem;
+  height: 245px;
+}
+.coments-container .coments-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.coments-container .coments-header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.coments-header .title-container h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.coments-header .title-container p {
+  color: var(--coments-header);
+  font-size: 1.6rem;
+}
+
+.coments-container p {
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+/* dots to fit screen sizes ⬇️ puntos para adaptarse a los tamaños de las pantalla */
+@media (min-width: 809px){
+    .header-review .r-2 {
+        margin-left: 4rem;
+      }
+      .header-review .r-3 {
+        margin-left: 8rem;
+      }
+      .cm2 {
+        margin-top: 2rem;
+      }
+      .cm3 {
+        margin-top: 4rem;
+      }
+}
+@media (max-width: 489px){
+    .social-header{
+        grid-template-columns: 1fr;
+    }
+    .grid-coments {
+        grid-template-columns: 1fr;  
+    }
+    .social-header .header-info h1{
+        width: 100%;
+        text-align: center;
+        font-size: 5rem;
+        font-weight: bold;
+    }
+    .social-header .header-info p{
+        width: 100%;
+        text-align: center;
+    }
+    .header-review .review-container {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        gap: 1.8rem;
+    }
+    .grid-coments{
+        gap: 1rem;
+    }
+}
